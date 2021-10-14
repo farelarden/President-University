@@ -1,0 +1,6 @@
+Array -> is a group of consecutive memory locations with the same name and type
+
+arrayType arrayName[sizeofArray]
+
+string -> array of Characthers
+at the end of string -> \0
