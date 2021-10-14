@@ -1,0 +1,32 @@
+<html>
+    <head><title>Event handler onClick and Form</title>
+    <script type="text/javascript">
+      function send(){
+        if(confirm("Are you sure to submit it ? ")){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+    </script>
+  </head>
+<body>
+    <form action="bla.php"
+          method="get">
+      UserName:
+      <input type="text"
+             name="user"
+             value="" />
+      <br />
+	  <br />
+      Password:
+      <input type="password"
+             name="pass" />
+      <p></p>
+      <input type="submit"
+             onClick="send();" />
+    </form>
+  </body>
+
+</html>

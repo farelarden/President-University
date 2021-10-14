@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            var option=prompt("What do you want?");
+           option=parseInt(option);
+            
+            switch(option){
+         case 1:
+            var a=prompt("assignment 1");
+            var b=prompt("assignment 2");
+            var c=prompt("assignment 3");
+            var d=prompt("mid");
+            var e=prompt("final");
+            
+            var x=Number(a)+Number(b)+Number(c);
+            var y=0.2*(Number(x)/3)+0.3*Number(d)+0.5*Number(e)+12;
+   
+            
+            document.writeln("The total assignment is " +x+".</br>");
+            document.writeln("Your grade is "+y);
+            break;
+                    
+          case 2:
+            var a=prompt("Number 1 :");
+            var b=prompt("Number 2: ");
+            var x=Number(a)|Number(b);
+            document.writeln("The result of a | b is "+x);
+            break;
+                    
+         case 3:
+            var a=prompt("number 1 :");
+            var b=prompt("Number 2: ");
+            var x=Number(a)&Number(b);
+            document.writeln("The result of a & b is "+x);
+            break;
+                
+         case 4:
+            var temperature=prompt("temperature");
+            temperature=parseFloat(temperature);
+            var tem2=9/5*Number(temperature)+32;
+            tem2=parseFloat(tem2);
+            document.writeln("The result is "+tem2+" Fahrenheit");
+            break;
+            
+            }
+        </script>
+    </head>
+</html>

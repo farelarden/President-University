@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script type="text/javascript">
+      function showForm(myform) {
+        NewWindow=window.open('','','width=300,height=200');
+        inputName="<b>Name: " + myform.username.value
+          + "</b><br />";
+        NewWindow.document.write(inputName);
+        input_telp="<b>Telephone: " + myform.userPhone.value
+          + "</b><br />";
+        NewWindow.document.write(input_telp);
+      }
+      function close_window1(){
+        NewWindow.window.close();
+      }
+    </script>
+    </head>
+    <body><hr><h3>Show Windowl</h2><p>
+    <form name="testform"> 
+    Please Put Your Name: <br />
+    <input type="text" size="50" name="username" />
+    <p>
+    Please Put Your Phone: <br />
+    <input type="text" size="30" name="userPhone" />
+    </p><p>
+    <input type="button"
+           value="show data form"
+           onClick="showForm(this.form)"; />
+    </form>
+    </p>
+    <big>
+    <a href="JavaScript:void(0)" onClick="close_window1()">
+    Close The Window</a>
+    </big>
+  </body>
+</html>

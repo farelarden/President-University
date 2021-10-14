@@ -1,0 +1,36 @@
+ <html>
+    <head>
+    </head>
+    
+        <script type="text/javascript">
+            
+            var totalDepth=0;
+            var totalLength=0;
+            var times=prompt("How many times?");
+            times=parseInt(times);
+            for(var i=1;i<=times;i++){
+                var depth=prompt("Please tell us the depth");
+                var angle=prompt("Please tell us the angle");
+                depth=parseInt(depth);
+                angle=parseInt(angle);
+                var depth_1=Math.abs(depth*Math.cos(angle*Math.PI/180));
+                depth_1=depth_1.toFixed(2);
+                
+                totalDepth+=Math.abs(depth*Math.cos(angle*Math.PI/180));
+                totalLength+=Math.abs(depth*Math.sin(angle*Math.PI/180));
+                
+                totalDepth1=totalDepth.toFixed(2);
+                totalLength1=totalLength.toFixed(2);
+                //var x=Math.sin(90);
+                //var y=Math.sin(3);
+                document.writeln("Depth "+i+": "+depth+"<br>");
+                document.writeln("Angle "+i+": "+angle+"<br>");
+                document.writeln("Total Depth is: "+depth_1+"<br><br>");
+               
+            }
+            //document.writeln(x+"<br>");
+            //document.writeln(y+"<br><br>");
+            document.writeln("Total Depth is "+totalDepth1+"<br>");
+            document.writeln("Total Distance is "+totalLength1);
+    </script>
+</html>

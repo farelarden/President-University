@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            
+           var name1=[10000];
+            var assignment=[10000];
+            var mid=[10000];
+            var final=[10000];
+            var point=[10000];
+            var i=0;
+            var k=0;
+            var l=0;
+            var m=0;
+            var n=0;
+            var studentz=0;
+         
+            
+        while(true){
+            var students=parseInt(prompt("How many Students?"));
+            studentz+=students;
+                 
+           
+                for(;i<studentz;i++){
+                    var a=i+1;
+                    name1[i]=prompt("What is his/her name?");
+                }
+                for(;k<studentz;k++){
+                    var a=k+1;
+                    mid[k]=parseFloat(prompt("Mid "+a));
+                }
+                for(;l<studentz;l++){
+                    var a=l+1;
+                    final[l]=parseFloat(prompt("Final "+a));
+                }
+                for(;m<studentz;m++){
+                   var a=m+1;
+                    assignment[m]=parseFloat(prompt("Score for assignment "+a));
+                }
+                for(;n<studentz;n++){
+                    point[n]=parseFloat(0.3*mid[n]+0.5*final[n]+0.2*assignment[n]);
+     
+                }
+             
+                
+                var try1=prompt("Do you want again?");
+                if(try1=="yes")
+                    {
+                        //i+=studentz-1;
+                        continue;
+                    }
+                else
+                    break;
+                
+            }
+           // document.writeln("studentz= "+studentz+" i= "+i);
+            // document.writeln("<br>");
+            for(var j=0;j<studentz;j++){
+                document.writeln(name1[j]);
+                if(j==students-1)
+                    document.writeln(".");
+                else
+                    document.writeln(",");
+            }
+            document.writeln("<br>");
+            for(var j=0;j<studentz;j++){
+                document.writeln(mid[j]);
+                 if(j==students-1)
+                    document.writeln(".");
+                else
+                    document.writeln(",");
+            }
+            document.writeln("<br>");
+            for(var j=0;j<studentz;j++){
+                document.writeln(final[j]);
+                 if(j==students-1)
+                    document.writeln(".");
+                else
+                    document.writeln(",");
+            }
+            document.writeln("<br>");
+            for(var j=0;j<studentz;j++){
+               document.writeln(assignment[j]);
+                 if(j==students-1)
+                    document.writeln(".");
+                else
+                    document.writeln(",");
+            }
+            document.writeln("<br>");
+            for(var j=0;j<studentz;j++){
+                document.writeln(point[j]);
+                 if(j==students-1)
+                    document.writeln(".");
+                else
+                    document.writeln(",");
+            }
+            document.writeln("<br>");
+            document.writeln("<br>");
+            for(var j=0;j<studentz;j++){
+                document.writeln(name1[j]+","+mid[j]+","+final[j]+","+assignment[j]+","+point[j]);
+                   document.writeln("<br>");
+            }
+                
+            
+           
+    
+        </script>
+    </head>
+</html>
+

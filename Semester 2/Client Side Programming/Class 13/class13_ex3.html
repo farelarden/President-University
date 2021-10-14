@@ -1,0 +1,36 @@
+<html>
+    <head><title>Event onReset</title>
+    <script type="text/javascript">
+      function resetAll(){
+        if(confirm("Reset ALL"
+          )){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+    </script>
+  </head>
+<body>
+    <form action="http://localhost/clientside/test11.php"
+          method="post"
+          onReset="return resetAll();" />
+      UserName:
+      <input type="text"
+             name="user"
+             value="" />
+      <br />
+	  <br />
+      Password:
+      <input type="password"
+             name="pass" />
+      <p></p>
+      <input type="submit"/>
+      <input type="reset"
+             value="Reset Form"/>
+      </p>
+    </form>
+  </body>
+
+</html>

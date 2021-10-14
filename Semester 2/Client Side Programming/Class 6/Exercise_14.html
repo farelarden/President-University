@@ -1,0 +1,40 @@
+<html>
+    <head>
+    </head>
+    
+        <script type="text/javascript">
+            function fahrenheit(){
+                var temperature=prompt("temperature");
+                temperature=parseFloat(temperature);
+                var tem2=9/5*Number(temperature)+32;
+                tem2=parseFloat(tem2);
+                document.writeln("The result is "+tem2+" Fahrenheit");
+            }
+            function or(){
+                var a=prompt("number 1 :");
+                var b=prompt("Number 2: ");
+                var x=Number(a)|Number(b);
+                document.writeln("The result of a | b is "+x);
+            }
+            function and(){
+                var a=prompt("number 1 :");
+                var b=prompt("Number 2: ");
+                var x=Number(a)&Number(b);
+                document.writeln("The result of a & b is "+x);
+            }
+    
+        
+            
+    </script>
+    <body>
+        <div align="center">
+            <form>
+                <input type="button" value="Fahrenheit Conversion" onClick="fahrenheit();"/>
+                <br>
+                <br>
+                <input type="button" value="OR" onClick="or();"/>
+                <input type="button" value="AND" onClick="and();"/>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            var factor=prompt("Enter number");
+            factor=parseInt(factor)
+            var x=1;
+            
+           
+            
+            if(factor==0||factor==1){
+                document.writeln("The result of the factorial is: 1")
+            }
+            else{
+                for(var i=factor;i>=1;i--){
+                    x=x*i
+                    
+                }
+                document.writeln("The result of ");
+                factorial(factor);
+                document.writeln("is "+x);
+            }
+            
+             
+            function factorial(y){
+                for(var i=y;i>=1;i--){
+                    document.writeln(i+"x");
+                }
+            }
+            
+        </script>
+    </head>
+</html>

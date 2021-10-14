@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script type="text/javascript">
+      function room(f){
+        if(f.menu1.selectedIndex == 0){
+          // Dapat juga dituliskan: document.form1.menu1.selectedIndex
+          f.text1.value="One Single Bed 160x200cm"
+          // Dapat juga dituliskan: document.form1.text1.value
+        }
+        if(f.menu1.selectedIndex == 1){
+          f.text1.value="One Single queen Bed 200x200cm";
+        }
+        if(f.menu1.selectedIndex == 2){
+          f.text1.value="One Single queen Bed 200x200cm + sofa";
+        }
+      
+      }
+    </script>
+    </head>
+    <body>
+        <form name="form1">
+      Choose Room<br />
+      <select name="menu1" size="4"
+              onChange="room(this.form)">
+        <option name="choose1" value="standard">Standard</option>
+        <option name="choose2" value="deluxe">Deluxe</option>
+        <option name="choose3" value="suite">Suite</option>
+        
+      </select>
+      <br /><br />
+      <input type="text" name="text1" size=65 />
+    </form>
+
+    </body>
+</html>

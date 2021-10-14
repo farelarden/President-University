@@ -1,0 +1,37 @@
+<html>
+    <head>
+    </head>
+    
+        <script type="text/javascript">
+            var totalArea=0;
+            
+            function square(a,b,i){
+                var area1=a*b;
+                document.writeln("The area of the square "+i+": "+area1+"<br>");
+                totalArea+=area1;
+                
+            }
+            
+            function triangle(a,b,i){
+                var area2=a*b/2;
+                document.writeln("The are of the triangle "+i+": "+area2+"<br>");
+                totalArea+=area2;
+            }
+            
+            var many=prompt("How many shapes? ");
+           
+            for(var i=1; i<=many;i++){
+                
+                var width=prompt("Width?");
+                var length=prompt("Length?");
+                var shape=prompt("square or triangle"); 
+                if(shape=="square"){
+                    square(width,length,i);
+                }
+                else
+                    triangle(width,length,i);
+            }
+            document.writeln("The total area is "+totalArea);
+            
+    </script>
+</html>

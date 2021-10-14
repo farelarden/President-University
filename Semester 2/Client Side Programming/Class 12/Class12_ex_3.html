@@ -1,0 +1,56 @@
+<html>
+    <head>
+         <script type="text/javascript">
+      var i=0;
+      var timeout;
+      function preLoadImages(){
+        if(document.images){
+          planet = new Array(); // global variable
+          planet[0]=new Image();
+          planet[0]="Venus.jpg";
+          planet[1]=new Image();
+          planet[1]="Neptune.jpg";
+          planet[2]=new Image();
+          planet[2]="Earth.jpg";
+          planet[3]=new Image();
+          planet[3]="Mars.jpg";
+          planet[4]=new Image();
+          planet[4]="Jupiter.jpg";
+        }
+        else{
+          alert("no picture");
+        }
+      }
+    function startSlide(){
+        if(i < planet.length){
+          document.images["planet_picures"].src = planet[i];
+          i++;
+        }
+        else{
+          i=0;
+          document.images["planet_picures"].src = planet[i];
+        }
+        timeout = setTimeout('startSlide()',1500);
+      }
+function STOPSlideShow(){
+        clearTimeout(timeout);
+      }
+    </script>
+    </head>
+             <body bgColor="black" onload = "preLoadImages()">
+    <img name="planet_picures" src="Jupiter.jpg" height="300"
+         width="300px" />
+    <form>
+      <br /><br />
+      <input type=button value="START"
+             onClick="return startSlide();"/>
+      <input type=button value="STOP"
+             onClick="return STOPSlideShow();"/>
+    </form>
+          
+        </body>
+
+     
+
+
+</html>

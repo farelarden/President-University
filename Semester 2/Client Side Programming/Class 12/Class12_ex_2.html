@@ -1,0 +1,47 @@
+<html>
+    <head>
+      
+        <script type="text/javascript">
+      var myImage=new Array("baby1.jpg", "baby2.jpg",
+                             "baby3.jpg", "baby4.jpg");
+      nil_indeks=0;
+      function nextImage(){
+        nil_indeks++;
+        if (nil_indeks < myImage.length){
+          document.images["babypic"].src = myImage[nil_indeks];
+      }
+        else{
+          nil_indeks=0;
+          document.images["babypic"].src = myImage[nil_indeks];
+        }
+      }
+             function previousImage(){
+        nil_indeks--;
+        if (nil_indeks >= 0){
+          document.images["babypic"].src = myImage[nil_indeks];
+        }
+        else{
+          nil_indeks=myImage.length - 1;
+          document.images["babypic"].src = myImage[nil_indeks];
+        }
+      }
+    </script>
+        <body>
+            <div align="center">
+    <h2>Baby</h2>
+    <img name="babypic" id="babypic" src="baby1.jpg"
+         width="500" height="440" >
+    <br />
+                
+    <a href="JavaScript:nextImage()">
+      Next Image<br />
+    </a>
+    <a href="JavaScript:previousImage()">
+      Previous Image<br />
+    </a>
+    </div>
+
+        </body>
+
+    </head>
+</html>

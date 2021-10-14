@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            var student=new Object();
+            student.name=prompt("Please enter your name");
+            student.adress=prompt("Please enter your address");
+            student.dob=prompt("Please enter your date of birth");
+            student.pob=prompt("Please enter you place of birth");
+            var grade1;
+            
+        function grade(){
+        while(true){
+        var subject = prompt("What is your subject ?");
+                 
+        while(true){
+            var attend=prompt("Attendance");
+        if (attend < 0 || attend > 15) {
+          alert("Out of range!");
+          continue; 
+        }
+            else
+                break;
+        }
+
+            while(true){
+            var assign1=prompt("assignment");
+         if (assign1 < 0 || assign1 > 100) {
+          alert("Out of range!");
+          continue; 
+        }
+                       else
+                break;
+        }
+             while(true){
+            var assign2=prompt("assignment");
+        if (assign2 < 0 || assign2 > 100) {
+          alert("Out of range!");
+          continue; 
+        }
+                   else
+                break;
+        }
+             while(true){
+            var assign3=prompt("assignment");
+                     if (assign3 < 0 || assign3 > 100) {
+          alert("Out of range!");
+          continue; 
+        }
+                   else
+                break;
+        }
+             while(true){
+            var mid=prompt("midterm");
+        if (mid < 0 || attend > 100) {
+          alert("Out of range!");
+          continue; 
+        }
+                   else
+                break;
+        }
+             while(true){
+            var final=prompt("final");
+                     if (final < 0 || final > 100) {
+          alert("Out of range!");
+          continue; 
+        }       else
+                break;
+        }
+
+        
+            attend=parseInt(attend);
+             assign1=parseInt(assign1);
+             assign2=parseInt(assign2);
+             assign3=parseInt(assign3);
+             mid=parseInt(mid);
+             final=parseInt(final);
+ 
+            
+            
+            var x=assign1+assign2+assign3;
+            var y=0.2*(x/3)+0.3*mid+0.5*final+12;
+            
+            x=parseInt(x);
+           y=Math.ceil(y);
+                 
+            
+       
+       // alert("Your total assignment score is "+x);
+         //  alert("Your grade is "+y);
+                
+            
+    
+       
+                    
+           if(attend >='10'){
+                
+                if(subject=="IT"){
+                    
+                    switch(true){
+                        case (y<=112 &&y>=85) :
+                            grade1="A";
+                            break;
+                            
+                        case (y<=84 &&y>=70) :
+                            grade1="B";
+                             break;
+                         
+                        case (y<=69 &&y>=60) :
+                            grade1="C";;
+                            break;
+                            
+                        case (y<=59 &&y>=50) :
+                            grade1="D";;
+                            break;
+                            
+                         case (y<=49 &&y>=0):
+                            grade1="E";;
+                            break;
+                            
+                        default:
+                            alert("Your grade is incorrect");
+                    }
+                    
+               
+                }
+                 else{
+                     switch(true){
+                        case  (y<=112 &&y>=80) :
+                            grade1="A";;
+                            break;
+                            
+                        case (y<=79 &&y>=65):
+                            grade1="B";;
+                            break;
+                         
+                        case (y<=64 &&y>=55):
+                            grade1="C";;
+                            break;
+                            
+                        case (y<=54 &&y>=45) :
+                            grade1="D";;
+                            break;
+                            
+                         case (y<=44 &&y>=0):
+                            grade1="E";;
+                            break;
+                            
+                        default:
+                            alert("Your grade is incorrect");
+                     
+                 }
+            }
+                
+      }
+            
+            
+            else{
+                if(subject=="IT"){
+                    switch(true){
+                        case (y<=112 &&y>=85) :
+                            grade1="A";
+                            break;
+                            
+                        case (y<=84 &&y>=70) :
+                            grade1="B";
+                            break;
+                         
+                        case (y<=69 &&y>=60) :
+                            grade1="C";
+                            break;
+                            
+                        case (y<=59 &&y>=50) :
+                            grade1="D";
+                            break;
+                            
+                         case (y<=49 &&y>=0) :
+                            grade1="E";
+                            break;
+                            
+                        default:
+                            alert("Your grade is incorrect");
+                    }
+                    
+               
+                }
+                 else{
+                     switch(y){
+                        case (y<=112 &&y>=80) :
+                            grade1="A";
+                            break;
+                            
+                        case (y<=79 &&y>=65) :
+                            grade1="B";
+                            break;
+                         
+                        case (y<=64 &&y>=55) :
+                            grade1="C";
+                            break;
+                            
+                        case (y<=54 &&y>=45):
+                            grade1="D";
+                            break;
+                            
+                         case (y<=44 &&y>=0) :
+                            grade1="E";
+                            break;
+                            
+                        default:
+                            alert("Your grade is incorrect");
+                     
+                 }
+            }
+                
+       }
+        var question=prompt("Again?");
+                 if(question=="Yes"||question=="yes")
+                     continue;
+                 else
+                     break;
+               
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            
+            document.writeln("<b>Name: "+student.name+"<br>");
+             document.writeln("Address: "+student.adress+"<br>");
+            document.writeln("Date of Birth: "+student.dob+"<br>");
+            document.writeln("Place of Birth: "+student.pob+"<br>");
+            grade();
+            document.writeln("Grade: "+grade1);
+            
+            
+        </script>
+    </body>
+</html>

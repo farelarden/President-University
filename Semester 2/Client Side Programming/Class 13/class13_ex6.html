@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script type="text/javascript">
+      function changeColor(f){
+        for (var i = 0; i < f.color1.length;i++){
+          if(f.color1[i].checked){
+            document.bgColor= f.color1[i].value;
+          }
+        }
+      }
+    </script>
+    </head>
+    <body>
+        <form name="formradio">
+      Choose background color:<p>
+      <input type=radio
+             name="color1"
+             value="#0099CC" />dark cyan<br />
+            
+      <input type=radio
+             name="color1"
+             value="#339966" />teal<br />
+      <input type=radio
+             name="color1"
+             value="#FF00FF" />magenta<br />
+      <input type=radio
+             name="color1"
+             value="#FFFF66" />light yellow<br />
+      <input type=radio
+             name="color1"
+             value="#FF9933" />light orange<br />
+      <p>
+      <input type=button
+             value="ChangeColor" onClick="changeColor(this.form);" />
+      <input type="reset" />
+    </form>
+
+</body>
+</html>

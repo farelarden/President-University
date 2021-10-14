@@ -1,0 +1,28 @@
+<html>
+    <head>
+<script type="text/javascript">
+      function checkForm(form1){
+        if(form1.yourname.value == ""){
+          
+          alert("Please type your name");
+          return(false);
+        }
+        else{
+          return(true);
+        }
+      }
+    </script>
+        </head>
+    <body>
+    <form method="post"
+          action="bla.php"
+          onSubmit="return checkForm(this)"><p>
+      <big><p>
+      Name:
+      <input type="text" name="yourname" size="50" />
+      <br /><br />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Clear" />
+    </form>
+</body>
+</html>

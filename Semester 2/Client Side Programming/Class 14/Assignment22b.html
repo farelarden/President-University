@@ -1,0 +1,68 @@
+<html>
+  <head><title>Name Verification</title>
+    <script type="text/javascript">
+      function validation(form){
+		if(form.first.value == ""){
+          
+          alert("Please type first name");
+          return(false);
+        }
+		if(form.last.value == ""){
+          
+          alert("Please type last name");
+          return(false);
+        }
+           if(checkText(form.first) == false){
+          alert ("First Name should contain letter");
+          return false;
+        }
+        if(checkText(form.last) == false){
+          alert("Last Name should contain letter");
+          return false;
+        }
+		if(confirm("Are you sure to submit it ? ")){
+          return true;
+        }
+        else{
+          return false;
+        }
+		
+        return true;
+      }
+ function checkText(textBox){
+        if( textBox.value.length != 0){
+          for (var i = 0; i < textBox.value.length;i++){
+            var ch= textBox.value.charAt(i);
+            if((ch < "A" || ch > "Z") && (ch< "a" || ch >"z")){
+              return false;
+            }
+          }
+        }
+        else {
+          return true;
+        }
+      }
+    </script>
+  </head>
+<body bgcolor="lightgreen">
+    <font face=verdana>
+    <strong>
+    <form name="checkText" onSubmit="return validation(this);">
+      First Name:
+      <br />
+      <input name="first"
+             type="text"
+             size=60>
+      <p>
+      Last Name:
+      <br />
+      <input name="last"
+             type="text"
+             size=60>
+      <p>
+      <input type=submit value="Submit">
+      <input type=reset>
+    </form>
+    </strong></font>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+            <img name="show" src="baby1.jpg" width="400" height="250" >
+        <script type="text/javascript">
+         
+            function openWin() {
+    window.open("https://www.kompas.com","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=400, height=400");
+               
+  
+      var myImage=new Array("baby1.jpg", "baby2.jpg", "baby3.jpg");
+      var n = prompt("Choose number 1 to 3","");
+      n--;
+      document.images["show"].src = myImage[n];
+}
+        </script>
+    </head>
+    <body>
+
+<form>
+  <input type="button" value="Open Window" onclick="openWin()">
+</form>
+    </body>
+
+</html>
+        

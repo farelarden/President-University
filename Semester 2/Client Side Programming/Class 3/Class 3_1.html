@@ -1,0 +1,44 @@
+<html>
+    <head>
+    </head>
+        <script type="text/javascript">
+            var x=4;
+            var y=12;
+            var z='4';
+            
+            var result =x<y;
+            document.writeln("Result "+result+".<br\>");
+            var result=x<y;
+            document.writeln("Result "+result+".<br\>");
+            var result = x === z;
+            document.writeln("Result "+result+".<br\>");
+            
+            var a=(x-y)*z;
+            document.writeln("a = "+a);
+            
+            var result1=15|9;
+            document.writeln("Result "+result1+".<br\>");
+            /* everything in the usage of '|','&','^','<<','>>' is from binary numbers,| is or which means they will turned into binary, counted and become a decimal again*/
+            var result1=15&9;
+            document.writeln("result "+result1+".<br\>");
+            var result1=15^9;
+            document.writeln("result "+result1+".<br\>");
+            /*kebalikan dari '&'*/
+            var result1=9<<2;
+            document.writeln("result "+result1+".<br\>");
+            /* 9 dan 2 dibikin biner, terus, biner angka 2 ditaro di sebelah kanan biner angka 9 sehingga pas desimal dihitung terlebih dahulu dari angka 2*/
+            var result1=9>>2;
+            document.writeln("result "+result1+".<br\>");
+            
+            var k=prompt("Please enter number 1");
+            var l=prompt("Please enter number 2");
+            var result2=k*l+2;
+            
+            alert("The result is "+result2);
+            
+            
+    </script>
+    
+    <body>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head><title>Event handler onSubmit dan Form</title>
+    <script type="text/javascript">
+      function send1(){
+        if(confirm("Are you sure to submit it ? ")){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+    </script>
+  </head>
+    <body>
+    <form action="http://localhost/clientside/test11.php"
+          method="post"
+		  onSubmit="return(send1());">
+       UserName:
+      <input type="text"
+             name="user"
+             value="" />
+      <br />
+	  <br />
+      Password:
+      <input type="password"
+             name="pass" />
+      <p></p>
+      <input type="submit"/>
+    </form>
+  </body>
+</html>
