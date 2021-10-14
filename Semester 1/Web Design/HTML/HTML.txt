@@ -1,0 +1,3 @@
+div -> kebawah
+span -> kesamping
+*Tahu pixelnya berapa dari ujung ke
